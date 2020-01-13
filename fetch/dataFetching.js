@@ -22,7 +22,7 @@ export default Datafetching = () => {
 
     return (
         <View>
-            <Text>here we are</Text>
+            <Text>here we are...</Text>
         </View>
     );
 }
