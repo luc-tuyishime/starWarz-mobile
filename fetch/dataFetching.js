@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View } from 'react-native';
 import axios from 'axios';
-import URL from '../configClient';
+import API_URL from '../configClient';
 
-
+console.log(API_URL);
 
 export default Datafetching = () => {
     const [characters, setCharacters] = useState([]);
@@ -11,7 +11,7 @@ export default Datafetching = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await axios.get(URL);
+                const data = await axios.get(API_URL);
                 setCharacters(data);
             } catch (e) {
                 console.log(e);
