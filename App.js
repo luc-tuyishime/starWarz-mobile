@@ -1,20 +1,16 @@
 import React from 'react';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from "react-navigation";
 import { StyleSheet, Text, View } from 'react-native';
 import Datafetching from './fetch/dataFetching';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Datafetching />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const navigator = createStackNavigator({
+  Home: { screen: Datafetching }
 });
+
+const App = createAppContainer(navigator);
+
+export default App;
+
+
