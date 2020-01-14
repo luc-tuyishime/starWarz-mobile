@@ -1,8 +1,6 @@
-import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from "react-navigation";
-import { StyleSheet, Text, View } from 'react-native';
-import Datafetching from './fetch/dataFetching';
+import Datafetching from './screen/home';
 
 
 const navigator = createStackNavigator({
